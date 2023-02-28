@@ -1,0 +1,14 @@
+local BlekLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/bleklib/main/library.lua"))()
+
+local win = BlekLib:Create({
+    Name = "Blek Library",
+    StartupSound = {
+        Toggle = true,
+        SoundID = "rbxassetid://6958727243",
+        TimePosition = 1
+    }
+})
+
+local maintab = win:Tab('Info')
+local charactertab = win:Tab('FE Scripts')
+local uitab = win:Tab('UI')
