@@ -1,7 +1,7 @@
 local BlekLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/bleklib/main/library.lua"))()
 
 local win = BlekLib:Create({
-    Name = "Blek Library",
+    Name = "Ultimate Trolling FE",
     StartupSound = {
         Toggle = true,
         SoundID = "rbxassetid://6958727243",
@@ -11,4 +11,5 @@ local win = BlekLib:Create({
 
 local maintab = win:Tab('Info')
 local charactertab = win:Tab('FE Scripts')
-local uitab = win:Tab('UI')
+local uitab = win:Tab('FE trolling')
+
