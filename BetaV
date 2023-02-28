@@ -13,3 +13,4 @@ local maintab = win:Tab('Info')
 local charactertab = win:Tab('FE Scripts')
 local uitab = win:Tab('FE trolling')
 
+ 
