@@ -11,15 +11,16 @@ local win = BlekLib:Create({
 
 -- sections
 
-local FeInfo = win:Tab('Info')
-local FeScript = win:Tab('Fe Scripts')
-local FeTroll = win:Tab('Fe Trolling')
-local FeScript = win:Tab('Fe Plus')
+
+-- section zones
+local maintab = win:Tab('Main')
+local charactertab = win:Tab('Character')
+local uitab = win:Tab('UI')
 
 -- Info Tab Contents
 
 
-FeInfo:Label('This is a label')
+maintab:Label('This is a label')
 
 -- Fe Script Contents
 
