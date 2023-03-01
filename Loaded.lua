@@ -17,4 +17,8 @@ This script is only made for brookhaven -- most games have an anti-cheat and i w
 
 ]]--
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxWebhookz/Equinox-FE/blob/main/BetaV"))()
+if game.PlaceId == 4924922222 then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/RobloxWebhookz/Equinox-FE/main/BetaV'))()
+elseif game.PlaceId == 4924922222 then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/RobloxWebhookz/Equinox-FE/main/BetaV'))()
+end 
