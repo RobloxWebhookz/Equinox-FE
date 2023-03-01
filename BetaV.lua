@@ -19,7 +19,7 @@ local FeScript = win:Tab('Fe Plus')
 -- Info Tab Contents
 
 
-main:Label('This is a label')
+FeInfo:Label('This is a label')
 
 -- Fe Script Contents
 
