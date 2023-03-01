@@ -13,14 +13,14 @@ local win = BlekLib:Create({
 
 
 -- section zones
-local maintab = win:Tab('Main')
-local charactertab = win:Tab('Character')
-local uitab = win:Tab('UI')
+local infotab = win:Tab'Info')
+local Fe1 = win:Tab('Fe Trolling')
+local plustab = win:Tab('Plus trolling')
 
 -- Info Tab Contents
 
 
-maintab:Label('This is a label')
+infotab:Label('Welcome beta testers')
 
 -- Fe Script Contents
 
