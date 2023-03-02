@@ -1,11 +1,4 @@
 -- stops the time
-
-
-
-
-
-
-
 wait(0.3)
 setting = settings().Network
 local Effect = Instance.new("ColorCorrectionEffect")
@@ -14,11 +7,12 @@ Effect.Saturation = -1
 Effect.Brightness = 0
 Effect.Contrast = 0
 
+local toggleKeyPressed = false
 
 Effect.Enabled = false
-function onKeyPress(inputObject, gameProcessedEvent)
+function onToggleKeyDown(inputObject, gameProcessedEvent)
 	if inputObject.KeyCode == Enum.KeyCode.RightControl then	
-		
+		toggleKeyPressed = true
 		Effect.Enabled = true
 		setting.IncomingReplicationLag = 1000
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed * 3
@@ -26,10 +20,14 @@ function onKeyPress(inputObject, gameProcessedEvent)
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		Effect.Enabled = false
 	    setting.IncomingReplicationLag = 0
-		
 	end
 end
 
+function onToggleKeyUp(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.RightControl then
+		toggleKeyPressed = false
+	end
+end
 
 -- slows particles
 
@@ -78,14 +76,14 @@ end
 
 -- Connect a function to the keydown event to slow down the particles
 game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
-    if input.KeyCode == SLOW_DOWN_KEYCODE then
+    if input.KeyCode == SLOW_DOWN_KEYCODE and toggleKeyPressed then
         slowDownEmitters()
     end
 end)
 
 -- Connect a function to the keyup event to restore the original time scales
 game:GetService("UserInputService").InputEnded:Connect(function(input, gameProcessed)
-    if input.KeyCode == SLOW_DOWN_KEYCODE then
+    if input.KeyCode == SLOW_DOWN_KEYCODE and toggleKeyPressed then
         restoreEmitters()
     end
 end)
@@ -97,22 +95,7 @@ while true do
     -- Clear the original time scales table
     originalTimeScales = {}
     
-    -- Search for all the particle emitters and fire in the game
-    local emitters = game.Workspace:GetDescendants()
-    for i, descendant in ipairs(emitters) do
-        if descendant:IsA("ParticleEmitter") then
-            -- Store the original time scale of the emitter
-            originalTimeScales[descendant] = descendant.TimeScale
-        elseif descendant:IsA("Fire") then
-            -- Store the original intensity of the fire
-            originalTimeScales[descendant] = descendant.Heat
-        end
-    end
-    
-    -- If the slow down key is currently held down, slow down the particles again
-    if game:GetService("UserInputService"):IsKeyDown(SLOW_DOWN_KEYCODE) then
-        slowDownEmitters()
-    end
-end
+    -- Search
+
 
 game:GetService("UserInputService").InputBegan:connect(onKeyPress)
