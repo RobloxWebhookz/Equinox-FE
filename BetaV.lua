@@ -6,17 +6,17 @@ local GUI = Mercury:Create{
     Name = "Mercury",
     Size = UDim2.fromOffset(600, 400),
     Theme = Mercury.Themes.Dark,
-    Link = "https://github.com/deeeity/mercury-lib"
+    Link = "https://github.com/RobloxWebhookz/Equinox-FE/"
 }
 
 -- start up
 
 local Tab = GUI:Tab{
-	Name = "Fe"
+	Name = "Game"
 	Icon = "rbxassetid://8569322835"
 }
 
 local Tab2= GUI:Tab2{
-	Name = "Cs" 
+	Name = "Universal" 
 	Icon = "rbxassetid://8569322835"
 }
