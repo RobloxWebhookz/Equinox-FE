@@ -1,30 +1,22 @@
-local BlekLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laderite/bleklib/main/library.lua"))()
-
-local win = BlekLib:Create({
-    Name = "Ultimate Trolling FE",
-    StartupSound = {
-        Toggle = true,
-        SoundID = "rbxassetid://6958727243",
-        TimePosition = 1
-    }
-})
-
--- sections
-
-
--- section zones
-local infotab = win:Tab'Info')
-local Fe1 = win:Tab('Fe Trolling')
-local plustab = win:Tab('Plus trolling')
-
--- Info Tab Contents
-
-
-infotab:Label('Welcome beta testers')
-
--- Fe Script Contents
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
 
 
+local GUI = Mercury:Create{
+    Name = "Mercury",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/deeeity/mercury-lib"
+}
 
--- Fe Trolling Contents
+-- start up
+
+local Tab = GUI:Tab{
+	Name = "Fe"
+	Icon = "rbxassetid://8569322835"
+}
+
+local Tab2= GUI:Tab2{
+	Name = "Cs" 
+	Icon = "rbxassetid://8569322835"
+}
