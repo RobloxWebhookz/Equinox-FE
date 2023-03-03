@@ -11,12 +11,8 @@ local GUI = Mercury:Create{
 
 -- start up
 
-local Tab = GUI:Tab{
-	Name = "Game"
-	Icon = "rbxassetid://8569322835"
-}
 
-local Tab2= GUI:Tab2{
-	Name = "Universal" 
+local Tab = GUI:Tab{
+	Name = "Main",
 	Icon = "rbxassetid://8569322835"
 }
